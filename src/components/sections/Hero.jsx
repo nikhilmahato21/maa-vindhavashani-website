@@ -13,7 +13,7 @@ export const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center"
+      className="relative min-h-screen flex items-center overflow-hidden"
       style={{
         background: 'linear-gradient(135deg, #0f0f0f 0%, #1a1208 50%, #0f0f0f 100%)',
       }}
@@ -29,6 +29,31 @@ export const Hero = () => {
 
       {/* Glow accent */}
       <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-[#e8b84b]/10 rounded-full blur-3xl pointer-events-none" />
+
+      {/* Car image — aesthetic background */}
+      <div className="absolute bottom-0 left-0 right-0 pointer-events-none select-none overflow-hidden">
+        <img
+          src="https://htcms-prod-images.s3.ap-south-1.amazonaws.com/ht/auto/cms-images/marutisuzuki_ertiga/multi-images/colour_marutisuzuki-ertiga_pearl-metallic-arctic-white_600x400_1600x900.jpg"
+          alt=""
+          aria-hidden="true"
+          className="w-full block"
+          style={{
+            opacity: 0.38,
+            filter: 'brightness(0.28) sepia(0.6) saturate(2.2)',
+            WebkitMaskImage:
+              'linear-gradient(to bottom, transparent 0%, black 28%, black 100%), linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)',
+            WebkitMaskComposite: 'source-in',
+            maskImage:
+              'linear-gradient(to bottom, transparent 0%, black 28%, black 100%), linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)',
+            maskComposite: 'intersect',
+          }}
+        />
+        {/* Ground glow beneath car */}
+        <div
+          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-20 blur-3xl"
+          style={{ background: 'rgba(232,184,75,0.14)' }}
+        />
+      </div>
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-10 w-full pt-24 pb-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">

@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { BUSINESS_INFO } from '../../constants/businessInfo';
 
 export const Hero = () => {
-  const [form, setForm] = useState({ from: '', to: '', date: '' });
+  const [form, setForm] = useState({ from: '', to: '', date: '', seats: '7 Seater' });
 
   const handleBook = (e) => {
     e.preventDefault();
-    const msg = `Hi! I want to book a taxi.\nFrom: ${form.from || 'N/A'}\nTo: ${form.to || 'N/A'}\nDate: ${form.date || 'N/A'}`;
+    const msg = `Hi! I want to book a taxi.\nCab Type: ${form.seats}\nFrom: ${form.from || 'N/A'}\nTo: ${form.to || 'N/A'}\nDate: ${form.date || 'N/A'}`;
     window.open(`https://wa.me/${BUSINESS_INFO.phoneLink}?text=${encodeURIComponent(msg)}`, '_blank');
   };
 
@@ -68,7 +68,7 @@ export const Hero = () => {
               <span className="text-[#e8b84b]">Taxi Service</span>
             </h1>
             <p className="text-white/60 text-lg leading-relaxed mb-10 max-w-md">
-              Premium {BUSINESS_INFO.vehicle} cab service in {BUSINESS_INFO.location}. Reliable, comfortable, and available 24/7 for city rides, outstation trips, and corporate travel.
+              Premium 4 &amp; 7 seater cab service in {BUSINESS_INFO.location}. Reliable, comfortable, and available 24/7 for city rides, outstation trips, and corporate travel.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -90,7 +90,7 @@ export const Hero = () => {
             <div className="flex gap-10 mt-14 pt-10 border-t border-white/10">
               {[
                 { value: '24/7', label: 'Available' },
-                { value: '7', label: 'Seater Ertiga' },
+                { value: '4 & 7', label: 'Seater options' },
                 { value: '100+', label: 'Routes covered' },
               ].map((stat) => (
                 <div key={stat.label}>
@@ -132,6 +132,27 @@ export const Hero = () => {
                     onChange={(e) => setForm({ ...form, to: e.target.value })}
                     className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#e8b84b] transition-colors"
                   />
+                </div>
+                <div>
+                  <label className="block text-xs font-semibold text-gray-500 uppercase tracking-widest mb-1.5">
+                    Cab Type
+                  </label>
+                  <div className="flex gap-2">
+                    {['4 Seater', '7 Seater'].map((type) => (
+                      <button
+                        key={type}
+                        type="button"
+                        onClick={() => setForm({ ...form, seats: type })}
+                        className={`flex-1 py-3 rounded-lg text-sm font-semibold border transition-colors ${
+                          form.seats === type
+                            ? 'bg-[#0f0f0f] text-white border-[#0f0f0f]'
+                            : 'bg-white text-gray-500 border-gray-200 hover:border-gray-400'
+                        }`}
+                      >
+                        {type}
+                      </button>
+                    ))}
+                  </div>
                 </div>
                 <div>
                   <label className="block text-xs font-semibold text-gray-500 uppercase tracking-widest mb-1.5">

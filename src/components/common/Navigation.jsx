@@ -27,7 +27,7 @@ export const Navigation = () => {
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2 flex-shrink-0">
             <span className="bg-[#e8b84b] text-[#0f0f0f] text-xs font-black px-2 py-1 rounded tracking-widest">MAA</span>
-            <span className="text-white font-bold text-sm tracking-widest uppercase hidden sm:block">Vindhavashani</span>
+            <span className="text-white font-bold text-sm tracking-widest uppercase  ">Vindhavashani</span>
           </a>
 
           {/* Desktop nav links */}

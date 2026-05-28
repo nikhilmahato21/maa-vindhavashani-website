@@ -3,7 +3,7 @@ export const BUSINESS_INFO = {
   phone: '+91 9771077793',
   phoneLink: '+919771077793',
   email: 'Kunnutiwari99@gmail.com',
-  location: 'Bettiah, Bihar',
+  location: 'Narkatiyaganj, Bihar',
   vehicle: 'Ertiga 7-Seater',
   tagline: 'Your Trusted Taxi Service',
 };
@@ -13,7 +13,7 @@ export const SERVICES = [
     id: 1,
     icon: '🏙️',
     title: 'City Taxi',
-    description: 'Quick and reliable transportation within Bettiah and surrounding areas. Perfect for daily commutes and short trips.',
+    description: 'Quick and reliable transportation within Narkatiyaganj and surrounding areas. Perfect for daily commutes and short trips.',
   },
   {
     id: 2,
@@ -35,7 +35,7 @@ export const PRICING = [
     title: 'City Ride',
     subtitle: 'Per km rate',
     price: '₹15',
-    features: ['Within Bettiah', '24/7 availability', 'Minimum ₹200'],
+    features: ['Within Narkatiyaganj', '24/7 availability', 'Minimum ₹200'],
   },
   {
     id: 2,
@@ -68,7 +68,7 @@ export const FEATURES = [
   {
     icon: 'MapPin',
     title: 'Local Expert',
-    description: 'Know every route in Bettiah',
+    description: 'Know every route in Narkatiyaganj',
   },
 ];
 

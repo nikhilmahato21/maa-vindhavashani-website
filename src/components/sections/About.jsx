@@ -1,7 +1,7 @@
 import React from 'react';
 
 const AREAS = [
-  { city: 'Bettiah', state: 'West Champaran', highlight: true },
+  { city: 'Narkatiyaganj', state: 'West Champaran', highlight: true },
   { city: 'Motihari', state: 'East Champaran', highlight: false },
   { city: 'Muzaffarpur', state: 'Bihar', highlight: false },
   { city: 'Patna', state: 'Bihar Capital', highlight: false },

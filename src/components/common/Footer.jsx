@@ -30,7 +30,7 @@ export const Footer = () => {
               <span className="font-bold text-sm tracking-widest uppercase">Vindhavashani</span>
             </div>
             <p className="text-white/50 text-sm leading-relaxed mb-6">
-              Your trusted taxi service in Bettiah, Bihar. Comfortable, affordable, and always on time.
+              Your trusted taxi service in Narkatiyaganj, Bihar. Comfortable, affordable, and always on time.
             </p>
             <div className="space-y-2">
               <a href={`tel:${BUSINESS_INFO.phoneLink}`} className="flex items-center gap-2 text-white/60 hover:text-[#e8b84b] text-sm transition-colors">
@@ -97,7 +97,7 @@ export const Footer = () => {
           <p className="text-white/30 text-xs">
             &copy; {new Date().getFullYear()} Maa Vindhavashani Taxi Service. All rights reserved.
           </p>
-          <p className="text-white/20 text-xs">Bettiah, Bihar, India</p>
+          <p className="text-white/20 text-xs">Narkatiyaganj, Bihar, India</p>
         </div>
 
       </div>

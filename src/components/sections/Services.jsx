@@ -6,26 +6,20 @@ const SERVICES = [
   {
     id: 1,
     label: 'City Taxi',
-    description: 'Quick and reliable rides within Bettiah and surrounding areas. Perfect for daily commutes and short trips.',
-    gradient: 'linear-gradient(160deg, #1a1208 0%, #3d2b00 100%)',
-    accent: '#e8b84b',
-    icon: '🏙️',
+    description: 'Quick and reliable rides within Narkatiyaganj and surrounding areas. Perfect for daily commutes and short trips.',
+    image: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=800&q=80',
   },
   {
     id: 2,
     label: 'Outstation',
     description: 'Long-distance journeys to Patna, Gorakhpur, Muzaffarpur and beyond. Experienced drivers, door-to-door comfort.',
-    gradient: 'linear-gradient(160deg, #0a1a0a 0%, #0d3d1a 100%)',
-    accent: '#4ade80',
-    icon: '🛣️',
+    image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=800&q=80',
   },
   {
     id: 3,
     label: 'Corporate Travel',
     description: 'Professional airport pickups, business meetings, and corporate events. Punctual and dependable every time.',
-    gradient: 'linear-gradient(160deg, #0a0a1a 0%, #1a1040 100%)',
-    accent: '#818cf8',
-    icon: '💼',
+    image: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80',
   },
 ];
 
@@ -49,21 +43,28 @@ export const Services = () => {
             <div
               key={service.id}
               className="relative rounded-2xl overflow-hidden group cursor-pointer"
-              style={{ background: service.gradient, minHeight: '340px' }}
+              style={{ minHeight: '340px' }}
             >
-              {/* Icon */}
-              <div className="absolute top-6 left-6 text-4xl">{service.icon}</div>
+              {/* Background photo */}
+              <img
+                src={service.image}
+                alt={service.label}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+
+              {/* Dark gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/10" />
 
               {/* Label chip */}
-              <div className="absolute top-6 right-6">
-                <span className="bg-white/10 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1.5 rounded-full border border-white/20">
+              <div className="absolute top-5 left-5 z-10">
+                <span className="bg-white/15 backdrop-blur-md text-white text-xs font-semibold px-3 py-1.5 rounded-full border border-white/25">
                   {service.label}
                 </span>
               </div>
 
               {/* Bottom content */}
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <p className="text-white/70 text-sm leading-relaxed mb-4">{service.description}</p>
+              <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
+                <p className="text-white/75 text-sm leading-relaxed mb-4">{service.description}</p>
                 <a
                   href={`tel:${BUSINESS_INFO.phoneLink}`}
                   className="inline-flex items-center gap-2 text-white font-semibold text-sm group-hover:gap-3 transition-all"
@@ -81,7 +82,7 @@ export const Services = () => {
         {/* Tagline */}
         <div className="text-center mt-16">
           <p className="text-[#0f0f0f]/60 text-lg max-w-2xl mx-auto leading-relaxed">
-            Whether you're travelling for business, leisure, or a family occasion — our 7-seater Ertiga ensures you arrive in comfort and on time.
+            Whether you're travelling for business, leisure, or a family occasion — our 4 &amp; 7 seater cabs ensure you arrive in comfort and on time.
           </p>
           <a
             href="#pricing"

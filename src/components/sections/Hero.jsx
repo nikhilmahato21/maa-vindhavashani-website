@@ -61,7 +61,7 @@ export const Hero = () => {
           {/* Left — headline */}
           <div>
             <p className="text-[#e8b84b] text-sm font-semibold tracking-[0.2em] uppercase mb-4">
-              Bettiah, Bihar
+              Narkatiyaganj, Bihar
             </p>
             <h1 className="text-white font-black leading-[1.05] mb-6" style={{ fontSize: 'clamp(2.8rem, 6vw, 5rem)' }}>
               Your Trusted<br />

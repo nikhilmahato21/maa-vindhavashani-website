@@ -10,7 +10,7 @@ const PLANS = [
     price: '₹15',
     unit: '/ km',
     note: 'Minimum ₹200',
-    features: ['Within Bettiah city', '24/7 availability', 'AC comfort', 'Quick pickup'],
+    features: ['Within Narkatiyaganj city', '24/7 availability', 'AC comfort', 'Quick pickup'],
     featured: false,
   },
   {
